@@ -11,43 +11,23 @@ const tictacToe=[
 ]
 console.log(tictacToe)
 
-///Shallow copy
-let employee = {
-    eid: "E102",
-    ename: "Jack",
-    eaddress: "New York",
-    salary: 50000
-}
- 
-console.log("Employee=> ", employee);
-let newEmployee = employee;    // Shallow copy
-console.log("New Employee=> ", newEmployee);
- 
-console.log("---------After modification----------");
-newEmployee.ename = "Beck";
-console.log("Employee=> ", employee);
-console.log("New Employee=> ", newEmployee);
+const objects = {
+    firstName: 'Bharat',
+    lastName: 'Kadam',
+    age: 21,
+    fatherName: 'Nagnath'
+};
+console.log(objects);
 
+//shallow copy using objects
+let objects1 = Object.assign({}, objects);
+//shallow copy using spread operator
+let objects2={...objects};
 
-let adam={
-    name:'adam',
-    lastname:'jason'
-}
-console.log(adam)
+console.log(objects2)
+console.log(objects1);
 
-let karan=adam;
-karan.name='karan';
-console.log(adam);
-console.log(karan);
-//deep copy
-
-const user = {
-    name: "Kingsley",
-    age: 28,
-    job: "Web Developer"
-}
-console.log(user)
-let clone = JSON.parse(JSON.stringify(user))
-clone.age=23;
-console.log(user)
-console.log(clone)
+objects1.firstName = 'Suraj';
+objects2.lastName='shinde'
+console.log(objects1);
+console.log(objects);  
