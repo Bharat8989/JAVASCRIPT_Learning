@@ -31,3 +31,28 @@ objects1.firstName = 'Suraj';
 objects2.lastName='shinde'
 console.log(objects1);
 console.log(objects);  
+
+
+
+const objects3 = {
+    firstName: 'Bharat',
+    lastName: 'Kadam',
+    age: 21,
+    fatherName: 'Nagnath',
+    address: {
+        city: 'Pune',
+        state: 'Maharashtra'
+    }
+};
+console.log(objects3);
+
+// Deep copy using JSON.parse() and JSON.stringify()
+let objects4 = JSON.parse(JSON.stringify(objects3));
+console.log(objects4);
+
+objects4.firstName = 'Suraj';
+objects4.address.city = 'Mumbai';
+console.log(objects4);
+console.log(objects3);
+
+
