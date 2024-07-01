@@ -1,24 +1,89 @@
-document.getElementById('h1').innerHTML = 'Arrays';
+const students = [
+  {
+    id: 1,
+    name: 'Alice Johnson',
+    age: 20,
+    sport: 'Basketball'
+  },
+  {
+    id: 2,
+    name: 'Bob Smith',
+    age: 21,
+    sport: 'Soccer'
+  },
+  {
+    id: 3,
+    name: 'Charlie Brown',
+    age: 22,
+    sport: 'Tennis'
+  },
+  {
+    id: 4,
+    name: 'David Williams',
+    age: 20,
+    sport: 'Swimming'
+  },
+  {
+    id: 5,
+    name: 'Eva Davis',
+    age: 21,
+    sport: 'Volleyball'
+  },
+  {
+    id: 6,
+    name: 'Frank Miller',
+    age: 23,
+    sport: 'Baseball'
+  },
+  {
+    id: 7,
+    name: 'Grace Wilson',
+    age: 22,
+    sport: 'Track and Field'
+  },
+  {
+    id: 8,
+    name: 'Hannah Lee',
+    age: 20,
+    sport: 'Gymnastics'
+  },
+  {
+    id: 9,
+    name: 'Isaac Moore',
+    age: 21,
+    sport: 'Wrestling'
+  },
+  {
+    id: 10,
+    name: 'Julia Taylor',
+    age: 23,
+    sport: 'Golf'
+  }
+];
 
-const studentName=['Bharat', 'Suraj', 'Pavan', 'Mukinda', 'Datta', 'Atamaram','Kartik']
+
+const entries=students.map((id,Name)=>{
+  //  console.log(Name+,id)
+  return id.id;
+})
+
+console.log(entries)
+
+const studentName=students.map((Name)=>{
+  return Name.name;
+})
 console.log(studentName)
-document.write("Student List : <br>" +studentName + "<br>")
-studentName.push('manmit');
-document.getElementById('demo').innerHTML=studentName;
 
-const person={
-    firstName:'john',lastName:'doe',age:23
-};
-let king=studentName.length;
-console.log(king)
-document.write(king);
 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-let fruit = fruits[0];
 
-//new array
+const fruits = new Map([
+  ['apples', 500],
+  ['bananas', 300],
+  ['oranges', 200]
+]);
 
-const points=new Array(23,43,543,23,12,34,45);
-const point=[23,43,23,45,67,87,55];
-console.log(points);
-console.log(point);
+const fruitValues = fruits.values();
+
+for (const value of fruitValues) {
+  console.log(value); // Output: 500, 300, 200
+}
