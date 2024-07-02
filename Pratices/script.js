@@ -1,89 +1,50 @@
-const students = [
-  {
-    id: 1,
-    name: 'Alice Johnson',
-    age: 20,
-    sport: 'Basketball'
-  },
-  {
-    id: 2,
-    name: 'Bob Smith',
-    age: 21,
-    sport: 'Soccer'
-  },
-  {
-    id: 3,
-    name: 'Charlie Brown',
-    age: 22,
-    sport: 'Tennis'
-  },
-  {
-    id: 4,
-    name: 'David Williams',
-    age: 20,
-    sport: 'Swimming'
-  },
-  {
-    id: 5,
-    name: 'Eva Davis',
-    age: 21,
-    sport: 'Volleyball'
-  },
-  {
-    id: 6,
-    name: 'Frank Miller',
-    age: 23,
-    sport: 'Baseball'
-  },
-  {
-    id: 7,
-    name: 'Grace Wilson',
-    age: 22,
-    sport: 'Track and Field'
-  },
-  {
-    id: 8,
-    name: 'Hannah Lee',
-    age: 20,
-    sport: 'Gymnastics'
-  },
-  {
-    id: 9,
-    name: 'Isaac Moore',
-    age: 21,
-    sport: 'Wrestling'
-  },
-  {
-    id: 10,
-    name: 'Julia Taylor',
-    age: 23,
-    sport: 'Golf'
-  }
-];
+//array
 
+let rollNo = [101, 102, 103, 104, 105];
+const rllNO1=[12,32,4,312,23,453,34];
 
-const entries=students.map((id,Name)=>{
-  //  console.log(Name+,id)
-  return id.id;
-})
-
-console.log(entries)
-
-const studentName=students.map((Name)=>{
-  return Name.name;
-})
-console.log(studentName)
+let concat=rollNo.concat(rllNO1)
+console.log(concat)
 
 
 
-const fruits = new Map([
-  ['apples', 500],
-  ['bananas', 300],
-  ['oranges', 200]
-]);
+let numbers = [1, 2, 3, 4, 5];
+let allPositive = numbers.every(num => num > 4);
 
-const fruitValues = fruits.values();
+console.log(allPositive); // Output: true
 
-for (const value of fruitValues) {
-  console.log(value); // Output: 500, 300, 200
-}
+let numbers1 = [1, 2, 3, 4, 5];
+let evenNumbers = numbers1.filter((num)=>{
+  if( num % 2 === 0)
+    return true;
+  else return false
+});
+
+console.log(evenNumbers); // Output: [2, 4]
+
+
+let nestedArray = [1, [2, [3, 4], 5]];
+let flattenedArray = nestedArray.flat(2);
+
+console.log(flattenedArray); // Output: [1, 2, 3, 4, 5]
+
+
+let numbers2 = [1, 2, 3, 4];
+let doubled = numbers2.flatMap((num)=>{
+  return [ num * 2]
+});
+
+console.log(doubled); // Output: [1, 2, 2, 4, 3, 6, 4, 8]
+
+
+let numbers3 = [1, 2, 3, 4, 5];
+numbers3.forEach(num => console.log(num));
+numbers3.reverse();
+console.log(numbers3)
+
+let numbers4 = [1, 2, 3, 4, 5];
+let sum = numbers5.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+console.log(sum); // Output: 15
+
+
