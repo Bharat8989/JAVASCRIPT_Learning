@@ -39,7 +39,7 @@ userName.addEventListener('change',(event)=>{
 userName.addEventListener('focus',(event)=>{
     console.log(event)
     console.log(event.target.value)
-    inputValue=event.target.value
+    inputValue=event.target.value 
     console.log("input event print")
     para.innerText=event.target.value
 })
@@ -54,3 +54,5 @@ form.addEventListener('click',(e)=>{
     console.log(e.target)
     console.log("your form is submit")
 })
+
+//submit event 
