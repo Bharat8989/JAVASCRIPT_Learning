@@ -18,4 +18,4 @@ three.addEventListener('focus',(e)=>{
 const four=document.getElementById('fourth')
 four.addEventListener('bluer',()=>{
     console.log('bluer event ')
-})
+}) 
